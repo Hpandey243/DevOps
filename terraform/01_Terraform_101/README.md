@@ -25,6 +25,39 @@ In this project, we will launch an EC2 instance of type t3.micro of given  ami t
 ## Prerequisite
 
 
-Active AWS account with user configured in local machine.
+- Active AWS account with user configured in local machine.
+- Terraform installed locally.
 
-Terraform installed locally.
+
+### Introduction
+
+
+ #### Step 1.    Create c1-versions. tf  file. 
+   
+ - This file contains the terraform related settings. The special terraform configuration block type is used to configure some behaviors of Terraform itself, such as requiring a minimum Terraform version to apply your configuration.
+     
+     
+#### Terraform Block  
+```
+       
+        terraform {
+          required_version = ">= 1.0" # which means any version equal & above 1.0 like 1.1, 1.2 etc
+          required_providers {     # we are using tf to interact with  aws cloud using aws provider.
+            aws = {
+              source = "hashicorp/aws"
+              version = "~> 3.0"
+            }
+          } 
+        } 
+``` 
+- Terraform relies on plugins called providers to interact with cloud providers.Terraform configurations must declare which providers they require so that Terraform can install and use them.
+#### Provider Block
+```#### Provider Block
+provider "aws" {
+  region = "us-east-1"    # specifying aws region 
+}
+```
+
+
+    
+
