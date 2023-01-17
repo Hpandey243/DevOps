@@ -18,3 +18,13 @@ Terraform creates and manages resources on cloud platforms and other services th
 
 
 
+## Description
+In this project, we will launch an EC2 instance of type t3.micro of given  ami taken from the AWS account and run the user scripts into that instance using  terraform.
+
+
+## Prerequisite
+
+
+Active AWS account with user configured in local machine.
+
+Terraform installed locally.
