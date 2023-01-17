@@ -132,12 +132,35 @@ terraform apply -auto-approve
 
 - It creates  resources on aws, creates  terraform.tfstate file. 
 
+<img width="1089" alt="image" src="https://user-images.githubusercontent.com/42787064/212956617-11f53901-f454-4e91-9e2a-8a5124823f0a.png">
+
 
 ### Verify
 
 - The  ami id and type of insatnce created on AWS console Ec2 service.
 - Tags added to instance.
-- Check the public ip of instance and paste it on browser. The user data scripts gets executed and the idex.html page is reachable via public ip.
+- Check the public ip of instance and paste it on browser. The user data scripts gets executed and the idex.html page is reachable via public ip/index.html.
+
+<img width="1092" alt="image" src="https://user-images.githubusercontent.com/42787064/212954400-91eef74e-e739-4a62-ae39-f0638e683b06.png">
+
+### Resource Cleanup
+```
+
+terraform plan -destroy  // view destroy plan using this command
+terraform destroy
+```
+<img width="1164" alt="image" src="https://user-images.githubusercontent.com/42787064/212955502-38628e9d-dcb0-4aed-9acd-d1b656bca22b.png">
+
+- The created AWS EC2 instance  are now terminated, verify it from AWS console
+
+
+
+
+Happy Learning!!!
+
+
+
+
 
 
 
